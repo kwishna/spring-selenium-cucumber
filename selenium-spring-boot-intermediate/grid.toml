@@ -1,0 +1,44 @@
+[server]
+port = 4444
+newsession-threadpool-size = 24
+host = "localhost"
+allow-cors = true
+session-retry-interval = 5
+
+[sessionqueue]
+session-request-timeout = 500
+
+[sessions]
+sessions-host = "localhost"
+
+[node]
+drivers = ["chrome", "firefox", "msedge", "ie"]
+downloads-path = "./downloads"
+#[[node.driver-configuration]]
+#display-name = "Firefox"
+#stereotype = "{\"browserName\": \"firefox\", \"platformName\": \"Windows 10\"}"
+#webdriver-executable = "./drivers/geckodriver.exe"
+#max-sessions = 4
+#[[node.driver-configuration]]
+#display-name = "Chrome"
+#stereotype = "{\"browserName\": \"chrome\", \"platformName\": \"Windows 10\"}"
+#webdriver-executable = "./drivers/chromedriver.exe"
+#max-sessions = 4
+#[[node.driver-configuration]]
+#display-name = "MS Edge"
+#stereotype = "{\"browserName\": \"msedge\", \"platformName\": \"Windows 10\"}"
+#webdriver-executable = "./drivers/msedgedriver.exe"
+#max-sessions = 4
+#[[node.driver-configuration]]
+#display-name = "Internet Explorer"
+#stereotype = "{\"browserName\": \"internet explorer\", \"platformName\": \"Windows 10\"}"
+#webdriver-executable = "./drivers/IEDriverServer.exe"
+#max-sessions = 4
+
+[logging]
+log = ".\\logs\\grid-log.log"
+log-level = "INFO"
+tracing = true
+http-logs = true
+log-timestamp-format = "HH:mm:ss.SSS"
+log-encoding = "UTF-8"

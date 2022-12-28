@@ -1,0 +1,28 @@
+Running Selenium Grid
+----------------------
+Docker Users:
+
+version: "3"
+services:
+  hub:
+    image: selenium/hub:latest
+    ports:
+      - "4444:4444"
+  chrome:
+    image: selenium/node-chrome:latest
+    depends_on:
+      - hub
+    environment:
+      - HUB_HOST=hub
+  firefox:
+    image: selenium/node-firefox:latest
+    shm_size: '1gb'
+    depends_on:
+      - hub
+    environment:
+      - HUB_HOST=hub
+
+Issue docker-compose up command to bring up selenium grid & docker-compose down for bringing it down.
+
+Non-docker Users:
+https://www.selenium.dev/documentation/grid/getting_started/

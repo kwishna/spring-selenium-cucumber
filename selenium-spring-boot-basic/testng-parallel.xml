@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="selenium-spring-boot-basic" verbose="1" parallel="tests" thread-count="8" data-provider-thread-count="8">
+    <test thread-count="5" name="selenium-spring-boot-basic-1">
+        <classes>
+            <class name="com.example.seleniumspring.googleTestNGmultiple.failed.Google1Tests" />
+        </classes>
+    </test>
+    <test thread-count="5" name="selenium-spring-boot-basic-2">
+        <classes>
+            <class name="com.example.seleniumspring.googleTestNGmultiple.failed.Google2Tests" />
+        </classes>
+    </test>
+</suite>

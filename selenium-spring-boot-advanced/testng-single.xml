@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="selenium-spring-boot-advanced" verbose="1" parallel="none" preserve-order="true">
+    <test thread-count="5" name="selenium-spring-boot">
+        <classes>
+            <class name="com.example.seleniumspring.scope_tests.JuniorSeniorTests" />
+        </classes>
+    </test>
+</suite>
