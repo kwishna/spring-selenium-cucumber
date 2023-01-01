@@ -63,13 +63,17 @@
                 -->
             </exclusions>
         </dependency>
-
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.24</version>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>com.github.javafaker</groupId>
             <artifactId>javafaker</artifactId>
             <version>1.0.2</version>
         </dependency>
-
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
@@ -133,6 +137,11 @@
             <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <version>3.4.1</version>
+        </dependency>
 
     </dependencies>
 
@@ -141,6 +150,40 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.4.1</version>
+                <executions>
+                    <execution>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/apidocs</outputDirectory>
+                            <additionalOptions>-Xdoclint:none</additionalOptions>
+                        </configuration>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.10.1</version>
+                <configuration>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>1.18.24</version>
+                        </path>
+                    </annotationProcessorPaths>
+                    <release>19</release>
+                    <source>19</source>
+                    <target>19</target>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -185,7 +228,7 @@
                                 <suiteXmlFiles>
 <!--                                        <suiteXmlFile>testng.xml</suiteXmlFile>-->
 <!--                                        <suiteXmlFile>testng-single.xml</suiteXmlFile>-->
-                                        <suiteXmlFile>testng-parallel.xml</suiteXmlFile>
+                                        <suiteXmlFile>testng-parallel-1.xml</suiteXmlFile>
                                     </suiteXmlFiles>
                     <!--
                             <includes>
