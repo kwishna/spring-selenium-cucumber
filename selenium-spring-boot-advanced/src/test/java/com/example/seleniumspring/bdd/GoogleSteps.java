@@ -9,6 +9,10 @@ import io.cucumber.spring.CucumberContextConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.testng.Assert;
 
+/*
+Q. Why The '@CucumberContextConfiguration' And '@SpringBootTest' Are Present In Only One Step Definition File?
+A. Because, Spring Will Treat All The 'CucumberOptions - Glue Folder' Files As Single File. We Should Put These Annotations In Only One Step File.
+ */
 @CucumberContextConfiguration
 @SpringBootTest
 public class GoogleSteps {

@@ -16,12 +16,12 @@ public class SeniorEngineer {
     private Salary salary;
 
     public void setSalary(int salary) {
-        logger.info("Setting Salary For Senior Engineer: " + salary);
+        logger.info("Setting Salary2 For Senior Engineer: " + salary);
         this.salary.setAmount(salary);
     }
 
     public int getSalary() {
-        logger.info("Getting Salary For Senior Engineer.");
+        logger.info("Getting Salary2 For Senior Engineer.");
         return this.salary.getAmount();
     }
 }

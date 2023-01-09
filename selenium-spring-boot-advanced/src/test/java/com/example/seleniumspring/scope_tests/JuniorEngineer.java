@@ -16,12 +16,12 @@ public class JuniorEngineer {
     private Salary salary;
 
     public void setSalary(int salary) {
-        logger.info("Setting Salary For Junior Engineer To: " + salary);
+        logger.info("Setting Salary2 For Junior Engineer To: " + salary);
         this.salary.setAmount(salary);
     }
 
     public int getSalary() {
-        logger.info("Getting Salary For Junior Engineer.");
+        logger.info("Getting Salary2 For Junior Engineer.");
         return this.salary.getAmount();
     }
 }

@@ -15,6 +15,10 @@ public class WindowAspect {
     @Autowired
     private WindowSwitchService switchService;
 
+    /*
+    This method will be executed before any method is called from any class annotations with @Window and if it is
+    present in package "com.udemy.spring.springselenium."
+     */
     @Before("@target(window) && within(com.udemy.spring.springselenium..*)")
     public void before(Window window){
         this.switchService.switchByTitle(window.value());

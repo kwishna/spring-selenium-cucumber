@@ -143,6 +143,15 @@
             <version>3.4.1</version>
         </dependency>
 
+
+        <!-- Make Sure To Exclude MongoAutoConfiguration.class In SpringApplication Main Class While Enabling Extent Report.-->
+        <!--
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>5.0.9</version>
+        </dependency>-->
+
     </dependencies>
 
     <build>
@@ -225,20 +234,34 @@
                             <forkCount>1.5C</forkCount>
                             <reuseForks>false</reuseForks>
                             <threadCount>6</threadCount>
-                                <suiteXmlFiles>
-<!--                                        <suiteXmlFile>testng.xml</suiteXmlFile>-->
-<!--                                        <suiteXmlFile>testng-single.xml</suiteXmlFile>-->
+<!--                                <suiteXmlFiles>
+&lt;!&ndash;                                        <suiteXmlFile>testng.xml</suiteXmlFile>&ndash;&gt;
+&lt;!&ndash;                                        <suiteXmlFile>testng-single.xml</suiteXmlFile>&ndash;&gt;
                                         <suiteXmlFile>testng-parallel-1.xml</suiteXmlFile>
-                                    </suiteXmlFiles>
+                                    </suiteXmlFiles>-->
                     <!--
                             <includes>
                                 <include>**/*Test*.java</include>
                             </includes>
                     -->
 
-                    <!--  <includes>
-                                <include>com.example.seleniumspring.CucumberRunner</include>
-                    </includes>-->
+                      <includes>
+                                <include>**/*FlightTest.java</include>
+                    </includes>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/lib</outputDirectory>
                         </configuration>
                     </execution>
                 </executions>

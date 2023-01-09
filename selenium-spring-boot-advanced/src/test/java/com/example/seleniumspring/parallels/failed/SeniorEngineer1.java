@@ -13,15 +13,15 @@ public class SeniorEngineer1 {
     Logger logger = LoggerFactory.getLogger(SeniorEngineer1.class);
 
     @Autowired
-    private Salary1 salary;
+    private Salary1 salary2;
 
     public void setSalary(int salary) {
-        logger.info("Setting Salary For Senior Engineer: " + salary);
-        this.salary.setAmount(salary);
+        logger.info("Setting Salary2 For Senior Engineer: " + salary);
+        this.salary2.setAmount(salary);
     }
 
     public int getSalary() {
-        logger.info("Getting Salary For Senior Engineer.");
-        return this.salary.getAmount();
+        logger.info("Getting Salary2 For Senior Engineer.");
+        return this.salary2.getAmount();
     }
 }

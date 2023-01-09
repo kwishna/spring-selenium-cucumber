@@ -26,11 +26,11 @@ public class JuniorSeniorTests extends SpringBaseTestNGTests {
         this.juniorEngineer.setSalary(1000);
         this.seniorEngineer.setSalary(5555);
 
-        logger.info("Asserting Senior Engineer Salary For 5555.");
-        Assert.assertEquals(5555, this.seniorEngineer.getSalary(), "Expecting Junior Engineer Salary To Be 5555.");
+        logger.info("Asserting Senior Engineer Salary2 For 5555.");
+        Assert.assertEquals(5555, this.seniorEngineer.getSalary(), "Expecting Junior Engineer Salary2 To Be 5555.");
 
-        logger.info("Asserting Junior Engineer Salary For 1000.");
-        Assert.assertEquals(1000, this.juniorEngineer.getSalary(), "Expecting Junior Engineer Salary To Be 1000.");
+        logger.info("Asserting Junior Engineer Salary2 For 1000.");
+        Assert.assertEquals(1000, this.juniorEngineer.getSalary(), "Expecting Junior Engineer Salary2 To Be 1000.");
 
     }
 }

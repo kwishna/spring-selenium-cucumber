@@ -29,7 +29,7 @@ public class LocalWebDriverConfig {
     @Value("${headless:true}")
     private boolean headless;
 
-    @ThreadScopeBean
+    @ThreadScopeBean // This Is Custom Annotation
 //    @Bean // ##Moved To Custom Annotation @ThreadScopeBean
 //    @Scope("browserscope") // Custom scope - ##Moved To Custom Annotation @ThreadScopeBean
 //    @Scope("prototype") // Creates Separate Object For Each @Autowired. Not Useful - Created So Many Drivers.

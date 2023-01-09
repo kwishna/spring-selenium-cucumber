@@ -8,20 +8,20 @@ import org.springframework.stereotype.Component;
 
 @Lazy
 @Component
-public class JuniorEngineer {
+public class JuniorEngineer2 {
 
-    Logger logger = LoggerFactory.getLogger(JuniorEngineer.class);
+    Logger logger = LoggerFactory.getLogger(JuniorEngineer2.class);
 
     @Autowired
-    private Salary salary;
+    private Salary2 salary2;
 
     public void setSalary(int salary) {
-        logger.info("Setting Salary For Junior Engineer To: " + salary);
-        this.salary.setAmount(salary);
+        logger.info("Setting Salary2 For Junior Engineer To: " + salary);
+        this.salary2.setAmount(salary);
     }
 
     public int getSalary() {
-        logger.info("Getting Salary For Junior Engineer.");
-        return this.salary.getAmount();
+        logger.info("Getting Salary2 For Junior Engineer.");
+        return this.salary2.getAmount();
     }
 }

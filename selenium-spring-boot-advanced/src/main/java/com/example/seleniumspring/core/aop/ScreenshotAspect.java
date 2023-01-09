@@ -16,6 +16,9 @@ public class ScreenshotAspect {
     @Autowired
     private ScreenshotService_Passes_On_Parallel_Using_ApplicationContext screenshotService;
 
+    /*
+    Executed After Any Method Which Has @TakeScreenshot Annotation
+     */
     @After("@annotation(takeScreenshot)")
     public void after(TakeScreenshot takeScreenshot) throws IOException {
         this.screenshotService.takeScreenshot();

@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 
 @TestPropertySource(properties = "browser=chrome")
 public class WindowSwitchTest extends SpringBaseTestNGTests {
-
+// https://vins-udemy.s3.amazonaws.com/ds/window/main.html
     @Autowired
     private MainPage mainPage;
 

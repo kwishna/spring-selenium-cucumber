@@ -15,18 +15,18 @@ public class JuniorSeniorTests1 extends SpringBaseTestNGTests {
     JuniorEngineer1 juniorEngineer1;
 
     @Autowired
-    SeniorEngineer1 seniorEngineer;
+    SeniorEngineer1 seniorEngineer1;
 
     @Test
     public void testSalary1() {
         this.juniorEngineer1.setSalary(1000);
-        this.seniorEngineer.setSalary(5555);
+        this.seniorEngineer1.setSalary(5555);
 
-        logger.info("Asserting Senior Engineer Salary For 5555.");
-        Assert.assertEquals(5555, this.seniorEngineer.getSalary(), "Expecting Junior Engineer Salary To Be 5555.");
+        logger.info("Asserting Senior Engineer Salary2 For 5555.");
+        Assert.assertEquals(5555, this.seniorEngineer1.getSalary(), "Expecting Junior Engineer Salary2 To Be 5555.");
 
-        logger.info("Asserting Junior Engineer Salary For 1000.");
-        Assert.assertEquals(1000, this.juniorEngineer1.getSalary(), "Expecting Junior Engineer Salary To Be 1000.");
+        logger.info("Asserting Junior Engineer Salary2 For 1000.");
+        Assert.assertEquals(1000, this.juniorEngineer1.getSalary(), "Expecting Junior Engineer Salary2 To Be 1000.");
 
     }
 }

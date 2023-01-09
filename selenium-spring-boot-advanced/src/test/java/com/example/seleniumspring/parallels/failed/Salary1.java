@@ -10,22 +10,22 @@ import org.springframework.stereotype.Component;
 public class Salary1 {
 
     Logger logger = LoggerFactory.getLogger(Salary1.class);
-    private int amount;
+    private int amount1;
 
     @Override
     public String toString() {
-        return "Salary{" +
-                "amount=" + amount +
+        return "Salary2{" +
+                "amount=" + amount1 +
                 '}';
     }
 
     public int getAmount() {
-        logger.info("Getting Salary Amount.");
-        return amount;
+        logger.info("Getting Salary2 Amount.");
+        return amount1;
     }
 
     public void setAmount(int amount) {
-        logger.info("Setting Salary Amount: " + amount);
-        this.amount = amount;
+        logger.info("Setting Salary2 Amount: " + amount);
+        this.amount1 = amount;
     }
 }

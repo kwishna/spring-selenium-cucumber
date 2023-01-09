@@ -9,7 +9,7 @@ import org.springframework.context.ApplicationContext;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-// Make Sure To Comment '@ConditionalOnProperty()' In '*WebDriverConfig' Class
+// Make Sure To Comment '@ConditionalOnProperty()' In '*WebDriverConfig' Class Else WebDriver Will Not Initialized.
 public class MultiBrowserTests extends SpringBaseTestNGTests {
 
     Logger logger = LoggerFactory.getLogger(MultiBrowserTests.class);

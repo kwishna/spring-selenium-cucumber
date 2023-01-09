@@ -10,7 +10,7 @@ import java.util.List;
 
 @Page
 public class MainPage extends AbstractBasePage {
-
+    // https://vins-udemy.s3.amazonaws.com/ds/window/main.html
     @FindBy(tagName = "a")
     private List<WebElement> links;
 
